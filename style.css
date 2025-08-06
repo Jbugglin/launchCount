@@ -1,0 +1,97 @@
+:root {
+    --priGrayishBlue: hsl(237, 18%, 59%);
+    --priSoftRed: hsl(345, 95%, 68%);
+
+    --white: hsl(0, 0%, 100%);
+    --neuDarkDesaturatedBlue: hsl(236, 21%, 26%);
+    --neuVeryDarkBlue: hsl(235, 16%, 14%);
+    --neuVeryDarkBlackBlue: hsl(234, 17%, 12%);
+
+    --containerSize: 500px;
+    --smallerContainerSize: 25%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body, 
+main {
+    width: 100dvw;
+    height: 100dvh;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background: linear-gradient(var(--neuVeryDarkBlackBlue), var(--neuVeryDarkBlue) ,var(--neuDarkDesaturatedBlue)); /* 1st is top - down */
+}
+
+main {
+    background-image: url(./images/pattern-hills.svg), url(./images/bg-stars.svg);
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+    background-position: bottom, top;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 6rem;
+    color: var(--white);
+    font-size: 1.25rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.countdownContainer,
+.containerLabels {
+    width: var(--containerSize);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeContainer,
+.timelabel {
+    width: 25%;
+    text-align: center;
+}
+
+.timeContainer {
+    font-size: 55px;
+    font-weight: 700;
+    color: var(--priSoftRed);
+}
+
+.timelabel {
+    color: var(--priGrayishBlue);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: var(--priGrayishBlue);
+    width: 100%;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
